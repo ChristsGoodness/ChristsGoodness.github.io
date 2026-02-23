@@ -39,18 +39,25 @@
         font-weight: bold;
     }
 
-    .video-container iframe {
+   .video-container {
+    position: relative;
     width: 100%;
-    height: 100%;
-    display: block;
+    height: 90vh;
+    max-height: 900px;
+    background: black;
+    overflow: hidden;
 }
 
-    .video-container {
-        width: 100%;
-        height: 90vh;
-        max-height: 900px;
-        background: #cfcfcf;
-    }
+.video-container iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 56.25vw; /* 16:9 ratio */
+    min-height: 100%;
+    min-width: 177.77vh; /* 16:9 ratio */
+    transform: translate(-50%, -50%);
+}
 
     video {
         width: 100%;
@@ -217,4 +224,5 @@ Email: <a href="mailto:ts3591@gmail.com">ts3591@gmail.com</a>
 </body>
 
 </html>
+
 
